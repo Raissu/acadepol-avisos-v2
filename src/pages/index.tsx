@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Head from "next/head";
+import Circle from "@/components/Circle";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -40,7 +41,7 @@ function Home() {
   }, [router]);
 
   return (
-    <div className="bg-gradient-to-r text-white from-gray-600 via-black-500 to-slate-950 flex items-center justify-center h-screen">
+    <div className="bg-gradient-to-r text-white from-gray-600 via-black-500 to-slate-950 flex flex-col items-center justify-center h-screen">
       <Head>
         <title>Acadepol</title>
       </Head>
@@ -51,7 +52,7 @@ function Home() {
           alt="Logo"
           width={120}
           height={120}
-          className="mx-auto mb-4"
+          className="mx-auto mb-4 animate-bounce"
         />
 
         <h1 className="text-4xl font-bold mb-2">
@@ -64,6 +65,7 @@ function Home() {
           Redirecionando para Cortex
         </h1>
       </div>
+      <Circle />
     </div>
   );
 }
