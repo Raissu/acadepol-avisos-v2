@@ -3,11 +3,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import logoAcadepol from "../assets/logo-acadepol-dourada.png";
-import { Head } from "next/document";
+import Head from "next/head";
 
 function Cortex() {
   return (
     <div>
+      <Head>
+        <title>Emissão de Avisos</title>
+      </Head>
+
       <header className="bg-gray-900 text-white py-4">
         <div className="container mx-auto flex justify-between items-center">
           <div className="logo">

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { Head } from "next/document";
+import Head from "next/head";
 
 function Home() {
   const [loading, setLoading] = useState(true);
@@ -41,6 +41,10 @@ function Home() {
 
   return (
     <div className="bg-gradient-to-r text-white from-gray-600 via-black-500 to-slate-950 flex items-center justify-center h-screen">
+      <Head>
+        <title>Acadepol</title>
+      </Head>
+
       <div className="text-center">
         <Image
           src={logo}
