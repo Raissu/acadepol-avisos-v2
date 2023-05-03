@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import logoAcadepol from "../assets/logo-acadepol-dourada.png";
 import Head from "next/head";
+import RichTextEditor from "@/components/richtext";
 
 function Cortex() {
   return (
@@ -76,11 +77,7 @@ function Cortex() {
         </label>
         <label className="block">
           <div className="mb-2">Aviso:</div>
-          <textarea
-            id="textoAviso"
-            placeholder="AVISO:"
-            className="block w-full border border-gray-400 p-2 rounded-md my-2"
-          />
+          <RichTextEditor />
         </label>
         <input
           type="submit"
